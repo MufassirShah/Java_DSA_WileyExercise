@@ -1,4 +1,4 @@
-/* Write a short Java method that takes an integer n and return the sum of the square all even positive integers less than or equal to n */
+/* Write a short Java method that takes an integer n and return the sum of all even positive integers less than or equal to n */
 import java.util.Scanner;
 
 public class ReinforcementP5 {
@@ -13,7 +13,8 @@ public class ReinforcementP5 {
     public static int inputMethod(int n){
         int sum=0;
         for(int i=2; i<=n; i+=2){
-            sum+=Math.pow(i,2);
+            if(i%2==0)
+            sum+=i;
         }
         return sum;
     }
