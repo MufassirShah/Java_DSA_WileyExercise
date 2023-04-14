@@ -1,27 +1,24 @@
 /* Suppose that we create an Array A of GameEntery objects, which has an integer scores field, once we clone A and store the result in the array B if we imadetely set A[4]. Score equal to 550, what is the score value of the GameEntery objects referenced by B[4]?  */
-public class ReinforcementP1{
-    public static void main(String []args){
-        GameEntery[] arrayA = {
-            new GameEntery(100),
-            new GameEntery(66),
-            new GameEntery(55),
-            new GameEntery(77),
-            new GameEntery(99),
+class ReinforcementP2{
+    public static void main(String[] args){
+        Assigner[] myArrayA = {
+            new Assigner(55),
+            new Assigner(66),
+            new Assigner(77),
+            new Assigner(88),
+            new Assigner(99),
         };
-        GameEntery[] arrayB = arrayA.clone();
-        arrayA[4].setScore(550); 
-        System.out.println(arrayB[4].getScore()); 
-    }
+    }    
 }
- class GameEntery{
-    private int score;
-    public GameEntery(int input){
-        this.score = input;
+class Assigner{
+    private int value;
+    public Assigner(int score){
+        this.value = score;
     }
-    public int getScore(){
-        return score;
+    public int getValue(){
+        return value;
     }
-    public void setScore(int score){
-        this.score = score;
+    public void setValue(int score){
+        this.value = score;
     }
 }
